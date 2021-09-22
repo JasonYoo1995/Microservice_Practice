@@ -4,8 +4,12 @@ server:
 spring:
   application:
     name: config-service
+  profiles:
+    active: native
   cloud:
     config:
       server:
-        git:
-          url: file://config-repo
+        native:
+          search-locations: file:///C:\Projects\Java Projects\Microservice
+#        git:
+#          url:
