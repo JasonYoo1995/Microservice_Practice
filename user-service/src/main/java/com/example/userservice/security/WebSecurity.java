@@ -26,10 +26,11 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
         http.authorizeRequests().antMatchers("/actuator/**").permitAll();
-        http.authorizeRequests().antMatchers("/**")
-                .hasIpAddress("localhost") // <- IP 변경
-                .and()
-                .addFilter(getAuthenticationFilter());
+        http.authorizeRequests().antMatchers("/**").permitAll(); // 임시 보안 해제
+//        http.authorizeRequests().antMatchers("/**")
+//                .hasIpAddress("localhost")
+//                .and()
+//                .addFilter(getAuthenticationFilter());
         http.headers().frameOptions().disable();
     }
 

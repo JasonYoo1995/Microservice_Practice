@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testDB
+    username: sa
+    password: "{cipher}AQCTT+zS8KCVycRGAsAl15kJx0vgHAPVKW0NBL4qsR9lAiISslz5YiCJqKa5GmT1bV7GbWgR/Fdxwey8eKTGrHv9iCBHcmv8Vo2VW8D0c+vjZ0Ol+yq84pzZ+kAp1LY7jfsgoU6+V2I5k7jUsrEswqrxYOZvXJk83UC+j2dutEojgaMxVVoBuVUN1i+73+/6Su+TgUX2wMYuNCzO5wDXxeAfnru2Fh7nm1F6dL32vEXoEz7RqDYZoGjopUKFcLRgfag6UCoCqW5StLybXfCzVxbtbdhosg+LgeAgwKoWZ/Us8p6lTG47T7v6Y1bRjgAfUUVLivnYAC9Bclp6LCK6oEV5poUzPdsP6ouNrTCQv2v+OYMpAixER7CSGChwvPqocOc="
+token:
+  expiration_time: 86400000
+  secret: user_token_native_application
+gateway:
+  ip: localhost
+order_service:
+  # url: http://127.0.0.1:8000/order-service/%s/orders
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  # @LoadBalanced 덕분에 가능
+  # 즉, 유레카에 적혀 있는 Application 이름인 ORDER-SERVICE에 대응되는 주소인 '127.0.0.1:8000:랜덤포트'로 치환
+  exception:
+    orders_is_empty: User's orders is empty.

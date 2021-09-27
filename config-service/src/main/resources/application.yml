@@ -15,9 +15,9 @@ spring:
     config:
       server:
         native:
-          search-locations: file:///C:\Projects\Java Projects\Microservice
+          search-locations: file:///C:\Projects\Java Projects\Microservice\config files
 #        git:
-#          url: https://github.com/JasonYoo1995/Microservice_Practice
+#          url: https://github.com/JasonYoo1995/Microservice-config-files
 
 management:
   endpoints:

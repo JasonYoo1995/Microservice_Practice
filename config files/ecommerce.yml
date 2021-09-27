@@ -1,5 +1,5 @@
 token:
   expiration_time: 86400000
-  secret: my_token
+  secret: "{cipher}AQB+1BzNeZAdSmTIZaGvwOnnXkA5Y/J9pUac0NkK4I4hCJmzdvNTO5Tc1Y8br5Y3roBo3hmWmfdIvvdcCkDcJFjTyuysTxzhPK8Qqp5KLWMNyFg0IpOsAVoLuM9VpJJbhuAZJ0cvn8JXgaTS/puF9Lx6ycQ3z2k8t3nvv670ZcY6mgnLXoje59IwJ/Yk6a4LR35dKiYeEYfeZQxTU1XQt+U7k6WwgVvJexkHXRMLw04Lx+7p+OA8x29uGYlCpx+QXkckHnCaiOVnK0iiZrpDPlZjxIbEzgywApyN/gpMB0vNeDq1qLeiVglNtfMgCyuUiIv8UDhp5FnxnAaV5I583/MMcR5ndXu1NWnuU6Uoj/KTVIZhMucGIXY8eDD7iycfWJU="
 gateway:
   ip: localhost
