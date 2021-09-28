@@ -1,5 +1,6 @@
 server:
-  port: 0
+#  port: 0
+  port: ${random.int(50000,51000)}
 
 spring:
   application:
@@ -24,7 +25,8 @@ spring:
 eureka:
   instance:
     hostname: localhost
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+#    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instance-id:  ${spring.application.name}:${server.port}
   client:
     register-with-eureka: true # 유레카에 등록
     fetch-registry: true # 외부 검색 가능
